@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<!-- Mirrored from liberadoagora.digital/4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:29:59 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1598836378125085');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1598836378125085&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids
+    async defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="css/fluid.css">
+  <title>Informações do Empréstimo — Quase Lá!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-primary: #FFC600;
+      --green-dark: #cc9e00;
+      --green-darker: #997700;
+      --green-light: #fff9c4;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --success: #16a34a;
+      --danger: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      /* Adjusted shadow color */
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      padding-top: 72px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER BANCÁRIO */
+    header.header {
+      background: linear-gradient(135deg, #ffcf33, #e6b200);
+      /* Yellow Gradient */
+      padding: 16px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-content {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-white {
+      height: 40px;
+      width: auto;
+      filter: brightness(0);
+      /* Made black */
+      opacity: 0.98;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .user-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+    }
+
+    .user-cpf {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: 0.3px;
+    }
+
+    .user-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      flex-shrink: 0;
+    }
+
+    .user-icon-wrapper svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+      stroke-width: 2;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 20px;
+      flex: 1;
+      overflow: visible;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(29, 196, 99, .08);
+      overflow: visible;
+      position: relative;
+    }
+
+    .progress-bar {
+      background: #e5e7eb;
+      border-radius: 10px;
+      height: 8px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, var(--green-primary), var(--green-dark));
+      height: 100%;
+      width: 80%;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #111827;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-group:focus-within {
+      z-index: 10;
+    }
+
+    .form-label {
+      display: block;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .form-select {
+      width: 100%;
+      padding: 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 16px;
+      background: #fff;
+      color: #374151;
+      transition: all 0.2s ease;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 12px center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-select:focus,
+    .form-select:active {
+      z-index: 100;
+    }
+
+    .form-select:focus {
+      outline: none;
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 3px rgba(29, 196, 99, .1);
+    }
+
+    .form-select:hover {
+      border-color: var(--green-primary);
+    }
+
+    .form-select option {
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      /* Yellow Gradient */
+      color: #000;
+      /* Black Text */
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(29, 196, 99, .3);
+    }
+
+    .btn-submit::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-submit:hover::after {
+      left: 100%;
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-submit .loading {
+      display: none;
+    }
+
+    .btn-submit.loading .loading {
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .btn-submit.loading .text {
+      display: none;
+    }
+
+    .form-select.error {
+      border-color: var(--danger);
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+
+    .form-select.success {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 3px rgba(255, 198, 0, 0.1);
+    }
+
+    .success-message {
+      color: var(--green-dark);
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+
+    /* ... animation keyframes omitted for brevity ... */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .form-group {
+      animation: slideIn 0.4s ease-out;
+    }
+
+    .form-group:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .form-group:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .form-group:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .form-group:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid transparent;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .success-feedback {
+      background: var(--green-light);
+      border: 2px solid var(--green-primary);
+      color: #000;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      margin: 16px 0;
+      display: none;
+      animation: slideIn 0.4s ease-out;
+    }
+
+    .form-group.completed .form-select {
+      border-color: var(--green-primary);
+      background-color: var(--green-light);
+    }
+
+    .form-group.completed .form-label::after {
+      content: " ✓";
+      color: var(--green-dark);
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      margin-top: auto;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #1f2937;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 420px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      filter: brightness(0);
+      /* Made black */
+    }
+
+    footer small {
+      font-size: 11px;
+      opacity: 0.95
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 16px;
+      }
+
+      .card {
+        padding: 20px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: 1.35rem;
+      }
+
+      .form-select {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .btn-submit {
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+
+    .form-select:focus-visible {
+      outline: 2px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    .form-select,
+    .btn-submit {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content" style="justify-content: center;">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="logo-white">
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="header-section">
+        <h1>Quase lá! 🎯</h1>
+        <p class="subtitle">Confirme algumas informações para validar sua elegibilidade para a Medjaro
+        </p>
+      </div>
+
+      <form id="loanForm" action="5.html" onsubmit="return handleFormSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="income">Você já tentou emagrecer antes?</label>
+          <select class="form-select" id="income" name="income" required>
+            <option value="" disabled selected>Selecione alguma opção</option>
+            <option value="500">Nunca tentei, mas quero começar agora</option>
+            <option value="1000">Já tentei dieta e academia</option>
+            <option value="1500">Já usei outros métodos e não funcionaram</option>
+            <option value="2000">Já tentei várias vezes, mas sempre desisto</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="salaryDay">Você segue alguma dieta?</label>
+          <select class="form-select" id="salaryDay" name="salaryDay" required>
+            <option value="" disabled selected>Selecione alguma opção</option>
+            <option value="1">Não sigo nenhuma dieta atualmente</option>
+            <option value="2">Já tentei, mas não consegui manter</option>
+            <option value="3">Sigo uma dieta com dificuldade</option>
+            <option value="4">Sim, sigo dieta regularmente</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="occupation">Você já ouviu falar em canetas para controle do apetite?</label>
+          <select class="form-select" id="occupation" name="occupation" required>
+            <option value="" disabled selected>Selecione alguma opção</option>
+            <option value="Empresário">Sim, já ouvi falar bastante</option>
+            <option value="Dona de casa">Já vi comentários nas redes sociais</option>
+            <option value="Empregado CLT">Ouvi falar, mas não sei como funciona</option>
+            <option value="Autônomo">Não, é a primeira vez que estou vendo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="education">Você já utilizou algum produto da CIMED?</label>
+          <select class="form-select" id="education" name="education" required>
+            <option value="" disabled selected>Selecione alguma opção</option>
+            <option value="Fundamental">Sim, já utilizei e confio na marca</option>
+            <option value="Médio">Já ouvi falar, mas nunca usei</option>
+            <option value="Superior">Conheço a CIMED, mas ainda não testei</option>
+            <option value="Pós-Graduação">Não conhecia a CIMED até agora</option>
+          </select>
+        </div>
+
+        <div class="success-feedback" id="successFeedback">
+          ✅ Informações validadas! Redirecionando para a próxima etapa...
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <div class="loading">
+            <div class="spinner"></div>
+          </div>
+          <span class="text">Continuar para Próxima Etapa</span>
+        </button>
+
+        <input type="hidden" name="utm_source" value="organic">
+        <input type="hidden" name="utm_campaign" value="loan-form">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="footer-logo">
+      <small style="color: black;">© 2026 CIMED INDÚSTRIA S.A.<br>
+        02.814.497/0001-07</small>
+    </div>
+  </footer>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const formData = new FormData(document.getElementById('loanForm'));
+      const formParams = {};
+
+      for (let [key, value] of formData.entries()) {
+        formParams[key] = value;
+      }
+
+      const currentUrlParams = new URLSearchParams(window.location.search);
+      currentUrlParams.forEach((value, key) => {
+        formParams[key] = value;
+      });
+
+      const urlParams = new URLSearchParams(formParams);
+      const targetUrl = `5.html?${urlParams.toString()}`;
+
+      window.location.href = targetUrl;
+
+      return false;
+    }
+
+    const form = document.getElementById('loanForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successFeedback = document.getElementById('successFeedback');
+    const selects = form.querySelectorAll('.form-select');
+
+    let completedFields = 0;
+    const totalFields = selects.length;
+
+    selects.forEach((select, index) => {
+      select.addEventListener('change', function () {
+        validateField(this);
+        updateProgress();
+
+        const formGroup = this.closest('.form-group');
+        if (this.value) {
+          formGroup.classList.add('completed');
+
+          if (window.innerWidth <= 768 && index < selects.length - 1) {
+            setTimeout(() => {
+              selects[index + 1].scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+              selects[index + 1].focus();
+            }, 300);
+          }
+        } else {
+          formGroup.classList.remove('completed');
+        }
+      });
+
+      select.addEventListener('focus', function () {
+        // Focus handling without transform to avoid dropdown positioning issues
+      });
+
+      select.addEventListener('blur', function () {
+        // Blur handling
+      });
+    });
+
+    function validateField(field) {
+      if (field.value) {
+        field.classList.remove('error');
+        field.classList.add('success');
+        return true;
+      } else {
+        field.classList.add('error');
+        field.classList.remove('success');
+        return false;
+      }
+    }
+
+    function updateProgress() {
+      completedFields = Array.from(selects).filter(select => select.value).length;
+      const progressPercent = (completedFields / totalFields) * 100;
+
+      document.querySelector('.progress-fill').style.width = `${Math.max(progressPercent, 20)}%`;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let isValid = true;
+      selects.forEach(select => {
+        if (!validateField(select)) {
+          isValid = false;
+        }
+      });
+
+      if (!isValid) {
+        const firstError = form.querySelector('.form-select.error');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstError.focus();
+        }
+        return;
+      }
+
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        successFeedback.style.display = 'block';
+        successFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        document.querySelector('.progress-fill').style.width = '100%';
+
+        setTimeout(() => {
+          handleFormSubmit(e);
+        }, 1500);
+      }, 800);
+    });
+
+    selects.forEach(select => {
+      const savedValue = localStorage.getItem(`loan_form_${select.name}`);
+      if (savedValue) {
+        select.value = savedValue;
+        validateField(select);
+        select.closest('.form-group').classList.add('completed');
+      }
+
+      select.addEventListener('change', function () {
+        localStorage.setItem(`loan_form_${this.name}`, this.value);
+      });
+    });
+
+    updateProgress();
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.tagName === 'SELECT') {
+        e.target.click();
+      }
+    });
+
+    window.addEventListener('beforeunload', function (e) {
+      const hasUnsavedData = Array.from(selects).some(select => select.value);
+      if (hasUnsavedData && completedFields < totalFields) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+
+    if (window.innerWidth <= 768) {
+      selects.forEach(select => {
+        select.addEventListener('focus', function () {
+          document.querySelector('meta[name=viewport]').setAttribute(
+            'content',
+            'width=device-width, initial-scale=1, maximum-scale=1'
+          );
+        });
+
+        select.addEventListener('blur', function () {
+          document.querySelector('meta[name=viewport]').setAttribute(
+            'content',
+            'width=device-width, initial-scale=1'
+          );
+        });
+      });
+    }
+  </script>
+</body>
+
+<!-- Mirrored from liberadoagora.digital/4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:29:59 GMT -->
+
+</html>

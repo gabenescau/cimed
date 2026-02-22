@@ -1,0 +1,93 @@
+/* Fluid & Responsive Improvements */
+:root {
+  --fluid-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Base Responsive Fixes */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fluid Interactivity */
+button, .btn, a.btn, .cta-button, .btn-submit, .btn-primary, .modal-button, .header-cta, .benefit-item {
+  transition: var(--fluid-transition) !important;
+}
+
+button:hover, .btn:hover, a.btn:hover, .cta-button:hover, .btn-submit:hover, .btn-primary:hover, .header-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+button:active, .btn:active, a.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Responsive Container Adjustments */
+@media (max-width: 600px) {
+  .container, .main-card, .card {
+    width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 20px !important;
+  }
+  
+  .hero-title, .page-title, h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Smooth Card Animations */
+.card, .main-card, .approved-card, .pricing-card, .info-card, .testimonial-card, .benefit-item {
+  animation: fluidSlideUp 0.6s ease-out forwards;
+}
+
+@keyframes fluidSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar for Fluidity */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFC600;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc9e00;
+}
+
+/* Input fluidity */
+input, select, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+input:focus, select:focus {
+  border-color: #FFC600 !important;
+  box-shadow: 0 0 0 3px rgba(255, 198, 0, 0.2) !important;
+}

