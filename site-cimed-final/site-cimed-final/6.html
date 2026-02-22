@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<!-- Mirrored from liberadoagora.digital/6.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Feb 2026 02:35:56 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1598836378125085');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1598836378125085&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids
+    async defer></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Análise de Crédito - Ágil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-primary: #FFC600;
+      --green-dark: #cc9e00;
+      --green-light: #fff9c4;
+      --whatsapp-light: #dcf8c6;
+      --bg: #e5ddd5;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: 72px;
+      /* Espaço para o header fixo */
+    }
+
+    header.header {
+      background: linear-gradient(135deg, #ffcf33, #e6b200);
+      /* Yellow Gradient */
+      padding: 16px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      flex-shrink: 0;
+      height: 72px;
+      /* Altura explícita */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-content {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .logo-white {
+      height: 40px;
+      width: auto;
+      filter: brightness(0);
+      /* Made black */
+      opacity: 0.98;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      overflow: hidden;
+      min-height: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .chat-container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      /* Ajuste para preencher container pai */
+      max-width: 390px;
+      height: 100%;
+      max-height: min(520px, calc(100% - 20px));
+      overflow: hidden;
+      position: relative;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(29, 196, 99, 0.3);
+      position: relative;
+      z-index: 2;
+      /* Garanta que fique acima */
+    }
+
+    .attendant-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.95);
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      /* Fallback se imagem falhar */
+    }
+
+    .attendant-info h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #000;
+      text-shadow: none;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .attendant-info p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #333;
+      text-shadow: none;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 14px;
+      background: #e5ddd5;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4cfc4' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    .chat-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-messages::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .chat-messages::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+
+    .message {
+      display: flex;
+      gap: 8px;
+      animation: slideIn 0.3s ease;
+      opacity: 0;
+      /* Começa invisível para animação */
+      animation-fill-mode: forwards;
+      /* Mantém estado final */
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.attendant {
+      align-self: flex-start;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .message-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--green-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .user-avatar svg {
+      width: 18px;
+      height: 18px;
+      color: white;
+    }
+
+    .message-bubble {
+      max-width: 78%;
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+
+    .message.attendant .message-bubble {
+      background: white;
+      border-bottom-left-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .message.user .message-bubble {
+      background: var(--whatsapp-light);
+      border-bottom-right-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 2px;
+    }
+
+    .message-text {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #303030;
+    }
+
+    .message-time {
+      font-size: 11px;
+      color: #667781;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    .typing-indicator {
+      display: flex;
+      gap: 4px;
+      padding: 8px 0;
+    }
+
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background: #90949c;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      60%,
+      100% {
+        transform: translateY(0);
+      }
+
+      30% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .option-button {
+      background: white;
+      border: 2px solid var(--green-primary);
+      color: var(--green-dark);
+      padding: 12px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      text-align: left;
+    }
+
+    .option-button:hover {
+      background: var(--green-light);
+      transform: translateX(4px);
+    }
+
+    .option-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* INPUT CONTAINER - DESIGN FIXO E ESTÁVEL */
+    .input-container {
+      background: #f0f2f5;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-top: 1px solid #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      padding: 10px 14px;
+      background: white;
+      border-radius: 24px;
+      min-height: 44px;
+      max-height: 44px;
+    }
+
+    .chat-input::placeholder {
+      color: #667781;
+    }
+
+    .send-btn {
+      width: 44px;
+      height: 44px;
+      background: var(--green-primary);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .send-btn:active {
+      background: var(--green-dark);
+      transform: scale(0.95);
+    }
+
+    .send-btn svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+
+    /* Autocomplete para banco */
+    .autocomplete-list {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+      max-height: 150px;
+      overflow-y: auto;
+      margin-bottom: 8px;
+      z-index: 100;
+      display: none;
+    }
+
+    .autocomplete-item {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #f0f2f5;
+      font-size: 14px;
+    }
+
+    .autocomplete-item:active {
+      background: var(--green-light);
+    }
+
+    .autocomplete-item:last-child {
+      border-bottom: none;
+    }
+
+    .loading-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid var(--green-light);
+      border-top: 4px solid var(--green-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--green-dark);
+      text-align: center;
+    }
+
+    .approval-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .approval-content {
+      background: white;
+      border-radius: 20px;
+      padding: 32px 24px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      animation: modalUp 0.4s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    @keyframes modalUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .approval-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .approval-icon svg {
+      width: 40px;
+      height: 40px;
+      color: #000;
+      stroke-width: 3;
+    }
+
+    .approval-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+
+    .approval-subtitle {
+      font-size: 16px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    .approval-details {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .approval-detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(29, 196, 99, 0.2);
+    }
+
+    .approval-detail:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .detail-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    .btn-continue {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s;
+    }
+
+    .btn-continue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(29, 196, 99, 0.3);
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      animation: fall 3s linear;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .installment-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .installment-card:active {
+      border-color: var(--green-primary);
+      background: var(--green-light);
+    }
+
+    .installment-months {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 3px;
+    }
+
+    .installment-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .installment-total {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    .installments-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 0 16px;
+      margin-top: 12px;
+    }
+
+    .pix-receipt {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .receipt-header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed #e5e7eb;
+      margin-bottom: 20px;
+    }
+
+    .receipt-logo {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 12px;
+    }
+
+    .receipt-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+
+    .receipt-status {
+      display: inline-block;
+      background: #dcfce7;
+      color: #16a34a;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .receipt-row:last-child {
+      border-bottom: none;
+    }
+
+    .receipt-label {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .receipt-value {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 600;
+      text-align: right;
+      max-width: 60%;
+      word-break: break-word;
+    }
+
+    .receipt-amount {
+      background: var(--green-light);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    .receipt-amount-label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .receipt-amount-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .receipt-footer {
+      text-align: center;
+      padding-top: 16px;
+      border-top: 2px dashed #e5e7eb;
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    footer.site-footer {
+      background: linear-gradient(135deg, #FFC600, #e6b200);
+      color: #1f2937;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-shrink: 0;
+      z-index: 999;
+    }
+
+    .footer-inner {
+      max-width: 420px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      filter: brightness(0);
+      /* Made black */
+    }
+
+    footer small {
+      font-size: 11px;
+      opacity: 0.95;
+    }
+
+    /* Esconder input quando não necessário */
+    .input-container.hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content" style="justify-content: center;">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="logo-white">
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-header">
+        <img src="https://i.ibb.co/6cjxfZZJ/atendente.png" alt="Marcela Torres" class="attendant-avatar">
+        <div class="attendant-info">
+          <h3>Marcela Torres</h3>
+          <p>Especialista em Nutrição</p>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <!-- Input Container Fixo -->
+      <div class="input-container hidden" id="inputContainer">
+        <div class="input-wrapper">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Digite aqui..." autocomplete="off"
+            enterkeyhint="send">
+          <div class="autocomplete-list" id="autocompleteList"></div>
+        </div>
+        <button class="send-btn" id="sendBtn" type="button">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-spinner"></div>
+      <div class="loading-text" style="color: black;">Analisando suas informações...<br><small
+          style="color: black;">Aguarde um momento</small></div>
+    </div>
+  </div>
+
+  <div class="approval-modal" id="approvalModal">
+    <div class="approval-content">
+      <div class="approval-icon" style="background: #25D366;">
+        <svg fill="none" stroke="white" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h2 class="approval-title">Parabéns!</h2>
+      <p class="approval-subtitle" style="font-size: 15px; line-height: 1.5;">Após uma análise, concluímos que você está
+        apto para receber uma das 100 MEDJAROS de graça.</p>
+
+      <div class="approval-details" id="approvalDetails"
+        style="background: transparent; padding: 0; text-align: left; margin-bottom: 20px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: start;">
+          <span>✔️</span>
+          <span style="font-size: 14px; color: #374151;">Sua caneta MEDJARO foi reservada temporariamente</span>
+        </div>
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: start;">
+          <span>✔️</span>
+          <span style="font-size: 14px; color: #374151;">Restam poucas unidades disponíveis</span>
+        </div>
+
+        <p style="font-size: 13px; color: #6b7280; margin: 16px 0; line-height: 1.4;">
+          Para garantir o envio com segurança e manter a integridade do produto, é necessário confirmar os dados e o
+          frete refrigerado.
+        </p>
+
+        <div
+          style="display: flex; gap: 10px; align-items: start; background: #fffbe6; padding: 10px; border-radius: 8px; border: 1px solid #ffe58f;">
+          <span>⚠️</span>
+          <span style="font-size: 12px; color: #856404; font-weight: 500;">Sua reserva será liberada caso a confirmação
+            não seja realizada.</span>
+        </div>
+      </div>
+
+      <button class="btn-continue" onclick="goToNextPage()">Continuar para Finalização →</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="https://i.ibb.co/dwZp5wrP/logo-cimed.png" alt="CIMED" class="footer-logo">
+      <small style="color: black;">© 2026 CIMED INDÚSTRIA S.A.<br>02.814.497/0001-07</small>
+    </div>
+  </footer>
+
+  <script>
+    // Configurações e Variáveis
+    let userName = 'Cliente';
+    let currentQuestion = 0;
+    let currentInputMode = null; // 'name', 'text_input', 'confirmation'
+
+    const questions = [
+      {
+        text: 'Hoje, o que mais te incomoda no seu corpo?',
+        options: ['Barriga', 'Roupas apertadas', 'Falta de confiança', 'Cansaço', 'Tudo isso']
+      },
+      {
+        text: 'Se você alcançar o peso que deseja, o que mais quer sentir?',
+        options: ['Confiança', 'Leveza', 'Autoestima', 'Disposição', 'Se olhar no espelho e gostar']
+      },
+      {
+        text: 'Me conta em uma frase: O que precisa mudar na sua vida agora?',
+        type: 'text_input',
+        placeholder: 'Digite aqui sua resposta...'
+      },
+      {
+        text: 'Você quer começar sua mudança agora?',
+        options: ['Sim, quero mudar', 'Sim, estou pronta', 'Quero muito']
+      }
+    ];
+
+    // Referências DOM
+    const chatMessages = document.getElementById('chatMessages');
+    const inputContainer = document.getElementById('inputContainer');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const autocompleteList = document.getElementById('autocompleteList');
+
+    // Funções Auxiliares
+    function scrollToBottom() {
+      if (chatMessages) {
+        requestAnimationFrame(() => {
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+      }
+    }
+
+    function showInput(mode, placeholder) {
+      if (!inputContainer || !chatInput) return;
+      currentInputMode = mode;
+      chatInput.value = '';
+      chatInput.placeholder = placeholder;
+      inputContainer.classList.remove('hidden');
+      if (autocompleteList) autocompleteList.style.display = 'none';
+
+      chatInput.inputMode = 'text';
+      chatInput.maxLength = 200;
+
+      setTimeout(scrollToBottom, 100);
+
+      // Auto-focus se não estiver em mobile (opcional, mas bom para UX)
+      // chatInput.focus(); 
+    }
+
+    function hideInput() {
+      currentInputMode = null;
+      if (inputContainer) inputContainer.classList.add('hidden');
+      if (autocompleteList) autocompleteList.style.display = 'none';
+      if (chatInput) chatInput.blur();
+    }
+
+    // Carregar Dados do Usuário
+    function loadUserData() {
+      try {
+        const n = localStorage.getItem('nome');
+        if (n) {
+          const ns = n.trim().split(' ');
+          userName = ns[0] || 'Cliente';
+        }
+      } catch (e) {
+        console.error('Erro ao carregar dados:', e);
+      }
+    }
+
+    // Gerenciador de Mensagens
+    function addMessage(text, isUser = false, showOptions = false) {
+      if (!chatMessages) return;
+
+      const m = document.createElement('div');
+      m.className = `message ${isUser ? 'user' : 'attendant'}`;
+
+      if (isUser) {
+        m.innerHTML = `
+          <div class="user-avatar">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <div class="message-bubble">
+            <div class="message-name">${userName}</div>
+            <div class="message-text">${text}</div>
+            <div class="message-time">${new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</div>
+          </div>`;
+      } else {
+        m.innerHTML = `
+          <img src="https://i.ibb.co/6cjxfZZJ/atendente.png" class="message-avatar">
+          <div class="message-bubble">
+            <div class="message-text">${text}</div>
+            <div class="message-time">${new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</div>
+          </div>`;
+      }
+
+      chatMessages.appendChild(m);
+
+      // Lógica específica para lidar com tipos de pergunta após adicionar a mensagem
+      if (!isUser && showOptions && questions[currentQuestion]) {
+        if (questions[currentQuestion].type === 'text_input') {
+          setTimeout(() => showInput('text_input', questions[currentQuestion].placeholder || 'Digite aqui...'), 500);
+        } else if (questions[currentQuestion].options) {
+          const op = document.createElement('div');
+          op.className = 'options-container';
+          op.style.padding = '0 16px';
+
+          questions[currentQuestion].options.forEach(opt => {
+            const b = document.createElement('button');
+            b.className = 'option-button';
+            b.textContent = opt;
+            b.onclick = () => handleOption(opt, op);
+            op.appendChild(b);
+          });
+
+          chatMessages.appendChild(op);
+        }
+      }
+
+      // Scroll Logic: User messages go to bottom, Attendant messages align to start/center
+      if (isUser) {
+        scrollToBottom();
+      } else {
+        setTimeout(() => {
+          m.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+    }
+
+    function showTyping() {
+      if (!chatMessages) return;
+      const t = document.createElement('div');
+      t.className = 'message attendant';
+      t.id = 'typing';
+      t.innerHTML = `
+        <img src="https://i.ibb.co/6cjxfZZJ/atendente.png" class="message-avatar">
+        <div class="message-bubble">
+          <div class="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>`;
+      chatMessages.appendChild(t);
+      scrollToBottom();
+    }
+
+    function removeTyping() {
+      const t = document.getElementById('typing');
+      if (t) t.remove();
+    }
+
+    // Lógica do Chat
+    function handleOption(option, container) {
+      if (container) {
+        container.style.display = 'none'; // Esconde opções imediatamente
+        container.remove(); // Remove do DOM
+      }
+      addMessage(option, true);
+
+      currentQuestion++; // Avança para a próxima
+
+      setTimeout(() => {
+        if (currentQuestion < questions.length) {
+          showTyping();
+          setTimeout(() => {
+            removeTyping();
+            addMessage(questions[currentQuestion].text, false, true);
+          }, 1500);
+        } else {
+          finishChat();
+        }
+      }, 500);
+    }
+
+    function handleSend() {
+      if (!chatInput) return;
+      const value = chatInput.value.trim();
+      if (!value) return;
+
+      switch (currentInputMode) {
+        case 'name': sendName(value); break;
+        case 'text_input': sendTextInput(value); break;
+      }
+    }
+
+    function sendName(value) {
+      userName = value;
+      localStorage.setItem('nome', value);
+      hideInput();
+      addMessage(value, true);
+
+      // Atualiza a primeira pergunta com o nome digitado
+      if (questions[0]) {
+        questions[0].text = `Certo ${userName}! Hoje, o que mais te incomoda no seu corpo?`;
+      }
+
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          removeTyping();
+          // Começa as perguntas do array (índice 0)
+          if (questions[0]) {
+            addMessage(questions[0].text, false, true);
+          }
+        }, 1500);
+      }, 800);
+    }
+
+    function sendTextInput(value) {
+      hideInput();
+      addMessage(value, true);
+
+      currentQuestion++;
+
+      setTimeout(() => {
+        if (currentQuestion < questions.length) {
+          showTyping();
+          setTimeout(() => {
+            removeTyping();
+            addMessage(questions[currentQuestion].text, false, true);
+          }, 1500);
+        } else {
+          finishChat();
+        }
+      }, 800);
+    }
+
+    function finishChat() {
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          removeTyping();
+          addMessage('Obrigada pelas respostas! Vou analisar seu perfil agora... ⏳');
+
+          setTimeout(() => {
+            document.getElementById('chatContainer').style.display = 'none';
+            document.getElementById('loadingContainer').style.display = 'flex';
+            setTimeout(showApproval, 3000);
+          }, 2000);
+        }, 1000);
+      }, 500);
+    }
+
+    function showApproval() {
+      document.getElementById('loadingContainer').style.display = 'none';
+      document.getElementById('approvalModal').style.display = 'flex';
+      createConfetti();
+    }
+
+    function createConfetti() {
+      const colors = ['#1dc463', '#18a854', '#FFD700', '#FF6B6B', '#4ECDC4'];
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          const cf = document.createElement('div');
+          cf.className = 'confetti';
+          cf.style.left = Math.random() * 100 + '%';
+          cf.style.background = colors[Math.floor(Math.random() * colors.length)];
+          cf.style.animationDuration = (Math.random() * 2 + 2) + 's';
+          cf.style.top = '-10px';
+          document.getElementById('approvalModal').appendChild(cf);
+          setTimeout(() => cf.remove(), 3000);
+        }, i * 50);
+      }
+    }
+
+    function goToNextPage() {
+      const p = new URLSearchParams(window.location.search);
+      window.location.href = '8.html' + (p.toString() ? '?' + p : '');
+    }
+
+    // Event Listeners
+    if (sendBtn) sendBtn.addEventListener('click', handleSend);
+
+    if (chatInput) {
+      chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleSend();
+        }
+      });
+
+      // Monitorar entrada para outros propósitos se necessário
+    }
+
+    // Inicialização
+    loadUserData();
+
+    // Sequência de início
+    setTimeout(() => {
+      showTyping();
+      setTimeout(() => {
+        removeTyping();
+        addMessage('Oi, vi que você respondeu ao nosso questionário 😊');
+
+        setTimeout(() => {
+          showTyping();
+          setTimeout(() => {
+            removeTyping();
+            addMessage('Antes de tudo, me diga: qual é o seu nome completo?');
+            setTimeout(() => showInput('name', 'Digite seu nome...'), 500);
+          }, 1500);
+        }, 1000);
+
+      }, 1500);
+    }, 500);
+  </script>
+</body>
+
+</html>
